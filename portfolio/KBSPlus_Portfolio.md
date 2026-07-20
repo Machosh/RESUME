@@ -49,7 +49,6 @@
 - **자체 네트워킹 레이어(PlusNetwork) 설계** — `URLInfo` / `RequestInfo` / `PlusNetworkUsecase` 조합의 타입 안전한 선언적 API 패턴을 직접 설계. 엔드포인트를 값 타입으로 정의하고 요청을 use-case 단위로 캡슐화해 보일러플레이트를 제거.
 - **반응형·동시성 아키텍처 도입** — Combine 단방향 데이터 흐름과 async/await 비동기 처리로 콜백 중첩을 제거. 네트워크 중복 호출 방지를 boolean 플래그가 아닌 `Task?` 레퍼런스로 표현하는 등 상태를 타입으로 모델링.
 - **iPad 적응형 레이아웃 / iOS 26 신규 디자인 대응** — 회전·창 크기에 따라 세로 스택과 좌우 분할을 동적 전환하는 반응형 시스템 구축. iOS 26 새 내비게이션 appearance에 맞춰 `UINavigationBarAppearance` 기반으로 내비게이션 바 재설계.
-- **미디어 플레이어 아키텍처 재설계(진행 중)** — JWPlayer 의존을 네이티브 AVPlayer로 교체. 단일 플레이어 + PIP 전용 + 인터스티셜 광고 구조로 재설계하고, 미드롤 광고 태그를 provider 클로저로 추상화.
 - **테스트 가능성 개선** — 네트워크 transport seam을 주입 가능하게 리팩터링. Service 계층에 `~Provider` 프로토콜 컨벤션을 도입해 단위 테스트 가능한 구조로 전환.
 - **접근성·실시간 기능** — VoiceOver, thread-safe 실시간 채팅, Google Cast, PIP, 시청 히스토리, 유니버설 링크 딥링킹, Apple 로그인, 간편모드·키즈모드.
 
